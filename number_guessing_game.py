@@ -9,9 +9,6 @@ def number_guessing_game():
     option = input("Enter your choice: ")
     option_converted = convert_number(option)
     
-    if option_converted:
-        print(validate_number(option_converted))
-
 
 def convert_number(num):
     try:
@@ -25,6 +22,7 @@ def validate_number(num):
     if not num < 0:
         return True
     else:
+        print("Please enter positive numbers.")
         return False   
 
 print("\nWelcome to the Number Guessing Game!\n"
