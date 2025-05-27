@@ -7,6 +7,17 @@ def number_guessing_game():
           )
     
     option = input("Enter your choice: ")
+    option_converted = convert_number(option)
+    print(option_converted)
+
+
+def convert_number(num):
+    try:
+        int(num)
+        return num
+    except ValueError:
+        return None 
+    
 
 print("\nWelcome to the Number Guessing Game!\n"
       "I'm thinking of a number between 1 and 100.\n"
