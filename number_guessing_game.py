@@ -7,7 +7,7 @@ def number_guessing_game():
           )
     
     option = input("Enter your choice: ")
-    option_converted = convert_number(option)
+    option_validate = validate_number(option)
     
 
 def convert_number(num):
@@ -19,11 +19,13 @@ def convert_number(num):
         return None 
 
 def validate_number(num):
-    if not num < 0:
-        return True
-    else:
-        print("Please enter positive numbers.")
-        return False   
+    num_converted = convert_number(num)
+    if num_converted:
+        if not num_converted < 0:
+            return num_converted
+        else:
+            print("Please enter positive numbers.")
+            return None 
 
 print("\nWelcome to the Number Guessing Game!\n"
       "I'm thinking of a number between 1 and 100.\n"
