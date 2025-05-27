@@ -8,6 +8,9 @@ def number_guessing_game():
     
     option = input("Enter your choice: ")
     option_converted = convert_number(option)
+    
+    if option_converted:
+        print(validate_number(option_converted))
 
 
 def convert_number(num):
@@ -15,8 +18,14 @@ def convert_number(num):
         num_coverted = int(num)
         return num_coverted
     except ValueError:
+        print("Please enter numbers, not letters.")
         return None 
-    
+
+def validate_number(num):
+    if not num < 0:
+        return True
+    else:
+        return False   
 
 print("\nWelcome to the Number Guessing Game!\n"
       "I'm thinking of a number between 1 and 100.\n"
