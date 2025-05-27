@@ -7,14 +7,13 @@ def number_guessing_game():
           )
     
     option = input("Enter your choice: ")
-    option_converted = convert_number(option)
-    print(option_converted)
+    option_converted = convert_and_validate_number(option)
 
 
-def convert_number(num):
+def convert_and_validate_number(num):
     try:
-        int(num)
-        return num
+        num_coverted = int(num)
+        return num_coverted
     except ValueError:
         return None 
     
