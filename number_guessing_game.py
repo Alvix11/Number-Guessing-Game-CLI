@@ -1,3 +1,5 @@
+import random
+
 def number_guessing_game():
 
     print("Please select the difficulty level:\n" \
