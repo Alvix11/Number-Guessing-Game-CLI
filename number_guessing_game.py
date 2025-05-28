@@ -6,19 +6,23 @@ def number_guessing_game():
           " 3. Hard (3 chances)\n"
           )
     
-    option = input("Enter your choice: ")
-    option_validate = validate_number(option)
+    while True:
+        option = input("Enter your choice: ")
+        option_validate = validate_number(option)
 
-    if option_validate:
+        if option_validate:
 
-        if option_validate == 1:
-            pass
-        elif option_validate == 2:
-            pass
-        elif option_validate == 3:
-            pass
-        else:
-            print("Option not available.")
+            if option_validate == 1:
+                print("opcion 1")
+                break
+            elif option_validate == 2:
+                print("opcion 2")
+                break
+            elif option_validate == 3:
+                print("opcion 3")
+                break
+            else:
+                print("Option not available.")
     
 
 def convert_number(num):
