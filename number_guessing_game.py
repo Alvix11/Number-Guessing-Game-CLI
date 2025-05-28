@@ -22,7 +22,7 @@ def number_guessing_game():
                 print("opcion 3")
                 break
             else:
-                print("Option not available.")
+                print("Option not available.\n")
     
 
 def convert_number(num):
@@ -30,7 +30,7 @@ def convert_number(num):
         num_coverted = int(num)
         return num_coverted
     except ValueError:
-        print("Please enter numbers, not letters.")
+        print("Please enter numbers, not letters.\n")
         return None 
 
 def validate_number(num):
@@ -39,7 +39,7 @@ def validate_number(num):
         if not num_converted < 0:
             return num_converted
         else:
-            print("Please enter positive numbers.")
+            print("Please enter positive numbers.\n")
             return None 
 
 print("\nWelcome to the Number Guessing Game!\n"
