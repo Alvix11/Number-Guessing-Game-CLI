@@ -15,13 +15,13 @@ def number_guessing_game():
         if option_validate:
 
             if option_validate == 1:
-                print("opcion 1")
+                game(10)
                 break
             elif option_validate == 2:
-                print("opcion 2")
+                game(5)
                 break
             elif option_validate == 3:
-                print("opcion 3")
+                game(3)
                 break
             else:
                 print("Option not available.\n")
@@ -43,6 +43,25 @@ def validate_number(num):
         else:
             print("Please enter positive numbers.\n")
             return None 
+
+def game(chances_user):
+    num_random = random.randint(1, 100) 
+    chances = chances_user
+    condition = 0
+
+    while condition < chances:
+        condition += 1
+        print(condition)
+        number = input("Enter your guess: ")
+        number_validate = validate_number(number)
+
+        if number_validate:
+            if number_validate == num_random:
+                print("Correct")
+                break
+            else:
+                print("Incorrect")
+
 
 print("\nWelcome to the Number Guessing Game!\n"
       "I'm thinking of a number between 1 and 100.\n"
