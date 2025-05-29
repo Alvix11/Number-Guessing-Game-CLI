@@ -17,17 +17,17 @@ def number_guessing_game():
             if option_validate == 1:
                 print("\nGreat! You have selected the Easy difficulty level.")
                 print("Let's start the game!\n")
-                game(10)
+                logic_game(10)
                 break
             elif option_validate == 2:
                 print("\nGreat! You have selected the Medium difficulty level.")
                 print("Let's start the game!\n")
-                game(5)
+                logic_game(5)
                 break
             elif option_validate == 3:
                 print("\nGreat! You have selected the Hard difficulty level.")
                 print("Let's start the game!\n")
-                game(3)
+                logic_game(3)
                 break
             else:
                 print("Option not available.\n")
@@ -50,7 +50,7 @@ def validate_number(num):
             print("Please enter positive numbers.\n")
             return None 
 
-def game(chances_user):
+def logic_game(chances_user):
     num_random = random.randint(1, 100) 
     chances = chances_user
     condition = 0
