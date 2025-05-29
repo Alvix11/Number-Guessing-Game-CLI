@@ -15,12 +15,18 @@ def number_guessing_game():
         if option_validate:
 
             if option_validate == 1:
+                print("\nGreat! You have selected the Easy difficulty level.")
+                print("Let's start the game!\n")
                 game(10)
                 break
             elif option_validate == 2:
+                print("\nGreat! You have selected the Medium difficulty level.")
+                print("Let's start the game!\n")
                 game(5)
                 break
             elif option_validate == 3:
+                print("\nGreat! You have selected the Hard difficulty level.")
+                print("Let's start the game!\n")
                 game(3)
                 break
             else:
