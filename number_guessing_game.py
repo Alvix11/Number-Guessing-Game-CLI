@@ -66,9 +66,9 @@ def game(chances_user):
                 break
             else:
                 if num_random > number_validate:
-                    print(f"Incorrect! The number is greater than {number_validate}.")
+                    print(f"Incorrect! The number is greater than {number_validate}.\n")
                 else:
-                    print(f"Incorrect! The number is less than {number_validate}.")
+                    print(f"Incorrect! The number is less than {number_validate}.\n")
 
 print("\nWelcome to the Number Guessing Game!\n"
       "I'm thinking of a number between 1 and 100.\n"
