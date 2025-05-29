@@ -62,7 +62,7 @@ def game(chances_user):
 
         if number_validate:
             if number_validate == num_random:
-                print("Correct")
+                print(f"Congratulations! You guessed the correct number in {condition} attempts.")
                 break
             else:
                 if num_random > number_validate:
