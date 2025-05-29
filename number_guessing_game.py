@@ -2,6 +2,11 @@ import random
 
 def number_guessing_game():
 
+    print("\nWelcome to the Number Guessing Game!\n"
+      "I'm thinking of a number between 1 and 100.\n"
+      "You have 5 chances to guess the correct number.\n"
+      )
+
     print("Please select the difficulty level:\n" \
           " 1. Easy (10 chances)\n" \
           " 2. Medium (5 chances)\n" \
@@ -30,8 +35,7 @@ def number_guessing_game():
                 logic_game(3)
                 break
             else:
-                print("Option not available.\n")
-    
+                print("Option not available.\n")    
 
 def convert_number(num):
     try:
@@ -72,10 +76,5 @@ def logic_game(chances_user):
                         print(f"Incorrect! The number is greater than {number_validate}.\n")
                     else:
                             print(f"Incorrect! The number is less than {number_validate}.\n")
-
-print("\nWelcome to the Number Guessing Game!\n"
-      "I'm thinking of a number between 1 and 100.\n"
-      "You have 5 chances to guess the correct number.\n"
-      )
 
 number_guessing_game()
