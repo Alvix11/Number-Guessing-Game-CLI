@@ -51,7 +51,6 @@ def game(chances_user):
 
     while condition < chances:
         condition += 1
-        print(condition)
         number = input("Enter your guess: ")
         number_validate = validate_number(number)
 
@@ -60,7 +59,11 @@ def game(chances_user):
                 print("Correct")
                 break
             else:
-                print("Incorrect")
+                if num_random > number_validate:
+                    print(f"Incorrect! The number is greater than {number_validate}.")
+                else:
+                    print(f"Incorrect! The number is less than {number_validate}.")
+
 
 
 print("\nWelcome to the Number Guessing Game!\n"
