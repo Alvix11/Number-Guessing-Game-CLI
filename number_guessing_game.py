@@ -67,14 +67,25 @@ def logic_game(chances_user):
             condition += 1
             if condition == chances:
                 print(f"\nWhat a shame! No more attempts.\nThe number was {num_random}.")
+                ask_play_again()
             else:
                 if number_validate == num_random:
                     print(f"Congratulations! You guessed the correct number in {condition} attempts.")
-                    break
+                    ask_play_again()
                 else:
                     if num_random > number_validate:
                         print(f"Incorrect! The number is greater than {number_validate}.\n")
                     else:
-                            print(f"Incorrect! The number is less than {number_validate}.\n")
+                        print(f"Incorrect! The number is less than {number_validate}.\n")
+
+def ask_play_again():
+    while True:
+        ask  = input("Would you like to play another round? Yes or no?").strip().lower()
+        if ask == "yes":
+            number_guessing_game()
+        elif ask == "no":
+            break
+        else:
+            print('Just type “yes” to continue or “no” to end the game.')
 
 number_guessing_game()
