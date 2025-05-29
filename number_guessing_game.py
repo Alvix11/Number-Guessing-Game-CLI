@@ -56,22 +56,22 @@ def game(chances_user):
     condition = 0
 
     while condition < chances:
-        condition += 1
         number = input("Enter your guess: ")
         number_validate = validate_number(number)
 
         if number_validate:
-            if number_validate == num_random:
-                print(f"Congratulations! You guessed the correct number in {condition} attempts.")
-                break
+            condition += 1
+            if condition == chances:
+                print(f"\nWhat a shame! No more attempts.\nThe number was {num_random}.")
             else:
-                if condition == chances:
-                    print(f"\nWhat a shame! No more attempts.\nThe number was {num_random}.")
+                if number_validate == num_random:
+                    print(f"Congratulations! You guessed the correct number in {condition} attempts.")
+                    break
                 else:
                     if num_random > number_validate:
                         print(f"Incorrect! The number is greater than {number_validate}.\n")
                     else:
-                        print(f"Incorrect! The number is less than {number_validate}.\n")
+                            print(f"Incorrect! The number is less than {number_validate}.\n")
 
 print("\nWelcome to the Number Guessing Game!\n"
       "I'm thinking of a number between 1 and 100.\n"
