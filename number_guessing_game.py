@@ -80,12 +80,12 @@ def logic_game(chances_user):
 
 def ask_play_again():
     while True:
-        ask  = input("Would you like to play another round? Yes or no?").strip().lower()
+        ask  = input("\nWould you like to play another round? Yes or no?: ").strip().lower()
         if ask == "yes":
             number_guessing_game()
         elif ask == "no":
             break
         else:
-            print('Just type “yes” to continue or “no” to end the game.')
+            print('\nJust type “yes” to continue or “no” to end the game.')
 
 number_guessing_game()
