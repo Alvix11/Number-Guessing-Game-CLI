@@ -86,12 +86,13 @@ def logic_game(chances_user):
 
 def ask_play_again():
     while True:
-        ask  = input("\nWould you like to play another round? Yes or no?: ").strip().lower()
-        if ask == "yes":
+        ask  = input("\nWould you like to play another round? Press '1' for Yes or '2' for No: ")
+        ask_convert = convert_number(ask)
+        if ask_convert == 1:
             number_guessing_game()
-        elif ask == "no":
+        elif ask_convert == 2:
             break
         else:
-            print('\nJust type “yes” to continue or “no” to end the game.')
+            print("Error")
 
 number_guessing_game()
