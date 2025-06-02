@@ -1,4 +1,5 @@
 import random
+import time
 
 def number_guessing_game():
 
@@ -60,6 +61,7 @@ def logic_game(chances_user):
     condition = 0
 
     while condition < chances:
+        start = time.perf_counter()
         number = input("Enter your guess: ")
         number_validate = validate_number(number)
 
@@ -70,7 +72,9 @@ def logic_game(chances_user):
                 ask_play_again()
             else:
                 if number_validate == num_random:
-                    print(f"Congratulations! You guessed the correct number in {condition} attempts.")
+                    end = time.perf_counter()
+                    elapsed_time = end - start
+                    print(f"Congratulations! You guessed the correct number in {condition} attempts and in a time of {elapsed_time:.2f} seconds.")
                     ask_play_again()
                 else:
                     if num_random > number_validate:
