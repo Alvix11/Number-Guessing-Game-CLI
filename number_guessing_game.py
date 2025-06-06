@@ -2,11 +2,6 @@ import random
 import time
 import sys
 
-print("\nWelcome to the Number Guessing Game!\n"
-      "I'm thinking of a number between 1 and 100.\n"
-      "You have 5 chances to guess the correct number."
-      )
-
 def number_guessing_game():
 
     print("\nPlease select the difficulty level:\n" \
@@ -97,4 +92,14 @@ def ask_play_again():
         else:
             print("Error")
 
-number_guessing_game()
+def main():
+    
+    print("\nWelcome to the Number Guessing Game!\n"
+      "I'm thinking of a number between 1 and 100.\n"
+      "You have 5 chances to guess the correct number."
+      )
+    
+    number_guessing_game()
+
+if __name__ == '__main__':
+    main()
