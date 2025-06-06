@@ -1,14 +1,11 @@
 import random
 import time
 import sys
+from utils import show_difficult_menu
 
 def number_guessing_game():
 
-    print("\nPlease select the difficulty level:\n" \
-          " 1. Easy (10 chances)\n" \
-          " 2. Medium (5 chances)\n" \
-          " 3. Hard (3 chances)\n"
-          )
+    show_difficult_menu()
     
     while True:
         option = input("Enter your choice: ")
