@@ -30,7 +30,8 @@ def number_guessing_game():
                 break  
 
 def logic_game(chances_user):
-    num_random = random.randint(1, 100) 
+    num_random = random.randint(1, 100)
+    print(num_random)
     chances = chances_user
     condition = 0
 
@@ -41,22 +42,23 @@ def logic_game(chances_user):
 
         if number_validate:
             condition += 1
+            
+            if number_validate == num_random:
+                end = time.perf_counter()
+                elapsed_time = end - start
+                print(f"\nCongratulations! You guessed the correct number in {condition} attempts and in a time of {elapsed_time:.2f} seconds.")
+                ask_play_again()
+                break
+            else:
+                if num_random > number_validate:
+                    print(f"Incorrect! The number is greater than {number_validate}.\n")
+                else:
+                    print(f"Incorrect! The number is less than {number_validate}.\n")
+                    
             if condition == chances:
                 print(f"\nWhat a shame! No more attempts.\nThe number was {num_random}.")
                 ask_play_again()
                 break
-            else:
-                if number_validate == num_random:
-                    end = time.perf_counter()
-                    elapsed_time = end - start
-                    print(f"Congratulations! You guessed the correct number in {condition} attempts and in a time of {elapsed_time:.2f} seconds.")
-                    ask_play_again()
-                    break
-                else:
-                    if num_random > number_validate:
-                        print(f"Incorrect! The number is greater than {number_validate}.\n")
-                    else:
-                        print(f"Incorrect! The number is less than {number_validate}.\n")
 
 def ask_play_again():
     while True:
