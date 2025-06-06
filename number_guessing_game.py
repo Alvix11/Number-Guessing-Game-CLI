@@ -1,5 +1,6 @@
 import random
 import time
+import sys
 
 def number_guessing_game():
 
@@ -91,7 +92,8 @@ def ask_play_again():
         if ask_convert == 1:
             number_guessing_game()
         elif ask_convert == 2:
-            break
+            print("\nThanks for playing!")
+            sys.exit()
         else:
             print("Error")
 
