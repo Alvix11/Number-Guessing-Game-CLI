@@ -1,7 +1,7 @@
 import random
 import time
 import sys
-from utils import show_difficult_menu, get_difficulty, validate_number, convert_number
+from utils import show_difficult_menu, get_difficulty, validate_number, convert_number, show_welcome_message
 
 def number_guessing_game():
 
@@ -71,12 +71,8 @@ def ask_play_again():
             print("Error")
 
 def main():
-    
-    print("\nWelcome to the Number Guessing Game!\n"
-      "I'm thinking of a number between 1 and 100.\n"
-      "You have 5 chances to guess the correct number."
-      )
-    
+
+    show_welcome_message()
     number_guessing_game()
 
 if __name__ == '__main__':
