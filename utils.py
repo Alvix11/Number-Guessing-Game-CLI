@@ -29,3 +29,9 @@ def get_difficulty():
         if option_validate in [1, 2, 3]:
             return option_validate
         print("Option not available.\n")
+
+def show_welcome_message():
+    print("\nWelcome to the Number Guessing Game!\n"
+      "I'm thinking of a number between 1 and 100.\n"
+      "You have 5 chances to guess the correct number."
+      )
