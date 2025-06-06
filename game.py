@@ -31,7 +31,6 @@ def number_guessing_game():
 
 def logic_game(chances_user):
     num_random = random.randint(1, 100)
-    print(num_random)
     chances = chances_user
     condition = 0
 
@@ -54,7 +53,7 @@ def logic_game(chances_user):
                     print(f"Incorrect! The number is greater than {number_validate}.\n")
                 else:
                     print(f"Incorrect! The number is less than {number_validate}.\n")
-                    
+
             if condition == chances:
                 print(f"\nWhat a shame! No more attempts.\nThe number was {num_random}.")
                 ask_play_again()
