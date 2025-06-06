@@ -4,6 +4,7 @@ import sys
 from utils import show_difficult_menu, get_difficulty, validate_number, convert_number
 
 def number_guessing_game():
+    '''Starts the number guessing game and manages the difficulty selection.'''
 
     show_difficult_menu()
     
@@ -30,6 +31,13 @@ def number_guessing_game():
                 break  
 
 def logic_game(chances_user):
+    '''Executes the main game logic:
+       * Generates a random number between 1 and 100.
+       * Allows the user to guess the number with a limited number of attempts.
+       * Informs if the entered number is higher or lower than the secret number.
+       * Measures the time taken for each successful attempt.
+       * Calls the function to ask if the user wants to play again upon completion.'''
+    
     num_random = random.randint(1, 100)
     chances = chances_user
     condition = 0
@@ -60,6 +68,8 @@ def logic_game(chances_user):
                 break
 
 def ask_play_again():
+    '''Asks the user if they want to play again and acts accordingly based on their response.'''
+
     while True:
 
         print("\nWould you like to play another round?\n" \
