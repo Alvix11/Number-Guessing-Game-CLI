@@ -60,7 +60,13 @@ def logic_game(chances_user):
 
 def ask_play_again():
     while True:
-        ask  = input("\nWould you like to play another round? Press '1' for Yes or '2' for No: ")
+
+        print("\nWould you like to play another round?\n" \
+          " 1. Yes\n" \
+          " 2. No\n"
+          )
+        
+        ask  = input("Enter your choice: ")
         ask_convert = convert_number(ask)
         if ask_convert == 1:
             number_guessing_game()
