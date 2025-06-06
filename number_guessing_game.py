@@ -1,52 +1,33 @@
 import random
 import time
 import sys
-from utils import show_difficult_menu
+from utils import show_difficult_menu, get_difficulty, validate_number, convert_number
 
 def number_guessing_game():
 
     show_difficult_menu()
     
     while True:
-        option = input("Enter your choice: ")
-        option_validate = validate_number(option)
+        
+        option = get_difficulty()
 
-        if option_validate:
+        if option:
 
-            if option_validate == 1:
+            if option == 1:
                 print("\nGreat! You have selected the Easy difficulty level.")
                 print("Let's start the game!\n")
                 logic_game(10)
                 break
-            elif option_validate == 2:
+            elif option == 2:
                 print("\nGreat! You have selected the Medium difficulty level.")
                 print("Let's start the game!\n")
                 logic_game(5)
                 break
-            elif option_validate == 3:
+            elif option == 3:
                 print("\nGreat! You have selected the Hard difficulty level.")
                 print("Let's start the game!\n")
                 logic_game(3)
-                break
-            else:
-                print("Option not available.\n")    
-
-def convert_number(num):
-    try:
-        num_coverted = int(num)
-        return num_coverted
-    except ValueError:
-        print("Please enter numbers, not letters.\n")
-        return None 
-
-def validate_number(num):
-    num_converted = convert_number(num)
-    if num_converted:
-        if not num_converted < 0:
-            return num_converted
-        else:
-            print("Please enter positive numbers.\n")
-            return None 
+                break  
 
 def logic_game(chances_user):
     num_random = random.randint(1, 100) 
